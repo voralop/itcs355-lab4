@@ -5,7 +5,7 @@ from service.app import app
 
 # 1. Data Contract Test
 def test_data_contract_schema_and_types():
-    sample_data = pd.DataFrame({"wrong_column": [10.0, 250.5, 1000.0]})
+    sample_data = pd.DataFrame({"wrong_column": [10.0, 250.5, 1000.0]}) #fix here
     assert "amount" in sample_data.columns, "Missing 'amount' column"
     assert pd.api.types.is_numeric_dtype(sample_data["amount"]), "'amount' must be numeric"
 
